@@ -22,6 +22,14 @@
 - **Touch Support**: [TO BE CONFIGURED — Full / Partial / None]
 - **Platform Notes**: [TO BE CONFIGURED — any platform-specific UX constraints]
 
+## 语言约定
+
+- **项目语言**: 简体中文
+- **代码注释**: 中文
+- **文档**: 中文 Markdown
+- **错误提示**: 中文
+- **Git 提交信息**: 中文（约定式提交格式：`feat:` `fix:` `docs:` 等）
+
 ## Naming Conventions
 
 - **Classes**: [TO BE CONFIGURED]

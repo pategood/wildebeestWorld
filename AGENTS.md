@@ -1,21 +1,12 @@
-# Claude Code Game Studios -- Game Studio Agent Architecture
+# Codex Game Studios -- Game Studio Agent Architecture
 
-Indie game development managed through 49 coordinated Claude Code subagents.
+Indie game development managed through 49 coordinated Codex subagents.
 Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 **This repo is the framework itself** — agent definitions, skills, hooks, rules,
 and templates. It is NOT a game. Actual game source code lives in `src/` (empty
 until `/setup-engine` and `/dev-story` are run). The "build/test" equivalent for
 this meta-project is `/skill-test` (see Framework Validation below).
-
-## 语言约定
-
-本项目所有内容使用**简体中文**：
-- 所有对话和文档使用中文
-- 代码注释使用中文
-- 错误提示使用中文
-- 设计文档使用中文 Markdown 格式
-- Git 提交信息使用中文（约定式提交格式：`feat:` `fix:` `docs:` 等）
 
 ## Technology Stack
 
@@ -30,7 +21,7 @@ this meta-project is `/skill-test` (see Framework Validation below).
 
 ## Project Structure
 
-@.claude/docs/directory-structure.md
+@.Codex/docs/directory-structure.md
 
 ## Engine Version Reference
 
@@ -38,11 +29,11 @@ this meta-project is `/skill-test` (see Framework Validation below).
 
 ## Technical Preferences
 
-@.claude/docs/technical-preferences.md
+@.Codex/docs/technical-preferences.md
 
 ## Coordination Rules
 
-@.claude/docs/coordination-rules.md
+@.Codex/docs/coordination-rules.md
 
 ## Collaboration Protocol
 
@@ -61,11 +52,11 @@ Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
 
 ## Coding Standards
 
-@.claude/docs/coding-standards.md
+@.Codex/docs/coding-standards.md
 
 ## Context Management
 
-@.claude/docs/context-management.md
+@.Codex/docs/context-management.md
 
 **Session recovery**: After compaction or crash, read `production/session-state/active.md`
 first — it contains the current task, progress, decisions, and open questions.
@@ -80,7 +71,7 @@ skill validation:
 | `/skill-test static all` | Validate all 73 skills for structural compliance |
 | `/skill-test lint <name>` | Check a specific skill's YAML and required fields |
 | `/skill-test catalog` | Verify all skills are indexed in the catalog |
-| `bash .claude/hooks/validate-commit.sh '{}' '{}'` | Test the pre-commit hook manually |
+| `bash .Codex/hooks/validate-commit.sh '{}' '{}'` | Test the pre-commit hook manually |
 
-After editing any file in `.claude/skills/`, the `validate-skill-change.sh` hook
+After editing any file in `.Codex/skills/`, the `validate-skill-change.sh` hook
 will automatically remind you to run `/skill-test`.
